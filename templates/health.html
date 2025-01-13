@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindWell - Modern Mental Health Assessment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='health.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>How are you feeling today?</h1>
+            <p>Your mental well-being matters. Let's check in.</p>
+        </header>
+        <main>
+            <form method="post" action="{{ url_for('health') }}" enctype="multipart/form-data">
+                <div class="input-group">
+                    <label for="feeling_text">Express your thoughts:</label>
+                    <textarea id="feeling_text" name="feeling_text" rows="4" placeholder="I'm feeling..." required></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="audio_file">Or share your voice:</label>
+                    <div class="audio-controls">
+                        <button type="button" id="recordButton" class="btn">
+                            <span class="btn-text">Start Recording</span>
+                            <span class="btn-icon" aria-hidden="true">🎙️</span>
+                        </button>
+                        <div id="audioVisualizer" class="audio-visualizer" aria-hidden="true"></div>
+                    </div>
+                    <audio id="audioPlayback" controls style="display: none;"></audio>
+                    <input type="file" id="audio_file" name="audio_file" accept="audio/*" style="display: none;">
+                </div>
+                <button type="submit" class="btn submit-btn">
+                    <span>Submit Assessment</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </form>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='health.js') }}"></script>
+</body>
+</html>

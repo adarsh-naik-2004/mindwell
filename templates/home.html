@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindWell - Mental Health Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">
+                <img src="static\mindwell_solutions_logo (1).jpg" alt="MindWell Logo" class="logo-img">
+                MindWell
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Your Mental Health Matters</h1>
+                <p>Discover a path to better well-being with our expert support and resources.</p>
+                <a href="#services" class="cta-button">Explore Our Services</a>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <img src="static\MENTAL HEALTH MONTH (1).png" alt="Mental Health Check" class="service-icon">
+                        <h3>Mental Health Check</h3>
+                        <p>Take our comprehensive assessment to understand your mental well-being.</p>
+                        <a href="#" class="service-link"><b><a href="{{ url_for('health') }}">Start Assessment</b></a>
+                    </div>
+                    <div class="service-card">
+                        <img src="static\AI_photo (3).png" alt="AI Chatbot" class="service-icon">
+                        <h3>AI Chatbot</h3>
+                        <p>Get instant support and guidance from our AI-powered chatbot.</p>
+                        <a href="#" class="service-link"><a href="{{ url_for('chatbot') }}">Chat Now</b></a>
+                    </div>
+                    <!-- <div class="service-card">
+                        <img src="https://via.placeholder.com/100" alt="Online Therapy" class="service-icon">
+                        <h3>Online Therapy</h3>
+                        <p>Connect with licensed therapists for professional help and support.</p>
+                        <a href="#" class="service-link">Book a Session</a>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About MindWell</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>MindWell is dedicated to providing accessible and effective mental health services. Our team of experts is committed to supporting your journey towards better mental well-being.</p>
+                        <ul class="feature-list">
+                            <li>24/7 Support</li>
+                            <li>Personalized Care Plans</li>
+                            <li>Evidence-Based Approaches</li>
+                            <li>Confidential and Secure</li>
+                        </ul>
+                    </div>
+                    <img src="static\ML_MENTAL (1) (1).webp" alt="About MindWell" class="about-image">
+                </div>
+            </div>
+        </section>
+
+        <section id="facts" class="facts">
+            <div class="container">
+                <h2>Why its Worrying</h2>
+                <div class="fact-grid">
+                    <div class="fact-card">
+                        <h3>1 in 4</h3>
+                        <p>People experience mental health issues each year</p>
+                    </div>
+                    <div class="fact-card">
+                        <h3>75%</h3>
+                        <p>Of mental health problems begin before age 24</p>
+                    </div>
+                    <div class="fact-card">
+                        <h3>30%</h3>
+                        <p>Reduction in depression risk with regular exercise</p>
+                    </div>
+                    <div class="fact-card">
+                        <h3>8 Hours</h3>
+                        <p>Of sleep per night recommended for good mental health</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <form class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MindWell</h3>
+                    <p>Empowering minds, enriching lives.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Team</h4>
+                    <ul>
+                        <li>Adarsh Manjunath Naik</li>
+                        <li>Krishna Agrawal</li>
+                        <li>Aryan Singh</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">FB</a>
+                        <a href="#" class="social-icon">TW</a>
+                        <a href="#" class="social-icon">IN</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MindWell. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

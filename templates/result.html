@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindWell - Assessment Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Mental Wellness Assessment</h1>
+        </header>
+        <main>
+            <div class="result-card">
+                <h2>Your Results</h2>
+                <div class="score-container">
+                    <div class="score" aria-label="Your mental well-being score">{{text_score}}</div>
+                    <div class="score-label">out of 100</div>
+                </div>
+            </div>
+            <div class="suggestions-container">
+                <h2>Personalized Wellness Tips</h2>
+                <ul class="suggestions-list">
+                    <li>Practice mindfulness meditation for 10 minutes daily</li>
+                    <li>Engage in regular physical exercise, aim for 30 minutes a day</li>
+                    <li>Maintain a consistent sleep schedule</li>
+                    <li>Connect with friends or family members regularly</li>
+                    <li>Try journaling to express your thoughts and feelings</li>
+                    <li>Limit social media usage and screen time before bed</li>
+                </ul>
+            </div>
+            <a href="{{ url_for('home') }}" class="btn">
+                <span>Back to Home</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+            </a>
+        </main>
+    </div>
+</body>
+</html>
